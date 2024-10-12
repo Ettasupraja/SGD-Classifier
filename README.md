@@ -1,6 +1,7 @@
 # SGD-Classifier
 
 NAME: ETTA SUPRAJA
+
 REG NO: 212223220022
 ## AIM:
 To write a program to predict the type of species of the Iris flower using the SGD Classifier.
@@ -34,6 +35,7 @@ iris = load_iris()
 df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 df['target'] = iris.target
 print(df.head())
+
 ![Screenshot 2024-10-12 125919](https://github.com/user-attachments/assets/788cf1f0-32f4-4c77-84c6-8b98be313e32)
 
 X = df.drop('target', axis=1)
@@ -52,6 +54,7 @@ print(f"Accuracy: {accuracy:.3f}")
 cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
+
 ![Screenshot 2024-10-12 130011](https://github.com/user-attachments/assets/4f257e52-af9d-426d-950b-7026bb96d3d6)
 
 
