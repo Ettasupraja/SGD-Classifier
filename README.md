@@ -36,27 +36,35 @@ df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 df['target'] = iris.target
 print(df.head())
 
-![Screenshot 2024-10-12 125919](https://github.com/user-attachments/assets/a1e938bd-68f5-4e29-8308-5ec972e19541)
+Output:
+![Screenshot 2024-10-12 172455](https://github.com/user-attachments/assets/8857bdef-449f-4b5c-8ad2-96f58ff652d1)
 
 
 X = df.drop('target', axis=1)
 y = df['target']
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
 sgd_clf = SGDClassifier(max_iter=1000, tol=1e-3)
 
 sgd_clf.fit(X_train, y_train)
-y_pred = sgd_clf.predict(X_test)
 
+Output:
+![Screenshot 2024-10-12 172805](https://github.com/user-attachments/assets/99d0dd63-c567-42e7-b738-e0d292ac6dc4)
+
+y_pred = sgd_clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.3f}")
+
+Output:
+![Screenshot 2024-10-12 172936](https://github.com/user-attachments/assets/33977660-9413-4954-af30-cc541c635e8e)
+
 
 cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
 
-![Screenshot 2024-10-12 130011](https://github.com/user-attachments/assets/bd3830b3-a4c4-4c10-9414-08b0c5ce633b)
+Output:
+![Screenshot 2024-10-12 173110](https://github.com/user-attachments/assets/4c85201b-a7bf-4e3d-99ea-76d10b8d9557)
+
 
 */
 ```
