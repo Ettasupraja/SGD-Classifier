@@ -37,6 +37,7 @@ df['target'] = iris.target
 print(df.head())
 
 Output:
+
 ![Screenshot 2024-10-12 172455](https://github.com/user-attachments/assets/8857bdef-449f-4b5c-8ad2-96f58ff652d1)
 
 
@@ -48,6 +49,7 @@ sgd_clf = SGDClassifier(max_iter=1000, tol=1e-3)
 sgd_clf.fit(X_train, y_train)
 
 Output:
+
 ![Screenshot 2024-10-12 172805](https://github.com/user-attachments/assets/99d0dd63-c567-42e7-b738-e0d292ac6dc4)
 
 y_pred = sgd_clf.predict(X_test)
@@ -55,6 +57,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.3f}")
 
 Output:
+
 ![Screenshot 2024-10-12 172936](https://github.com/user-attachments/assets/33977660-9413-4954-af30-cc541c635e8e)
 
 
@@ -63,6 +66,7 @@ print("Confusion Matrix:")
 print(cm)
 
 Output:
+
 ![Screenshot 2024-10-12 173110](https://github.com/user-attachments/assets/4c85201b-a7bf-4e3d-99ea-76d10b8d9557)
 
 
