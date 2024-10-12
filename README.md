@@ -35,8 +35,8 @@ iris = load_iris()
 df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 df['target'] = iris.target
 print(df.head())
+![Screenshot 2024-10-12 125919](https://github.com/user-attachments/assets/a1e938bd-68f5-4e29-8308-5ec972e19541)
 
-![Screenshot 2024-10-12 125919](https://github.com/user-attachments/assets/788cf1f0-32f4-4c77-84c6-8b98be313e32)
 
 X = df.drop('target', axis=1)
 y = df['target']
@@ -54,14 +54,10 @@ print(f"Accuracy: {accuracy:.3f}")
 cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
-
-![Screenshot 2024-10-12 130011](https://github.com/user-attachments/assets/4f257e52-af9d-426d-950b-7026bb96d3d6)
-
+![Screenshot 2024-10-12 130011](https://github.com/user-attachments/assets/bd3830b3-a4c4-4c10-9414-08b0c5ce633b)
 
 */
 ```
-
-
 
 
 ## Result:
