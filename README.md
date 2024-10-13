@@ -28,41 +28,30 @@ import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, confusion_matrix
-import matplotlib.pyplot as plt
-import seaborn as sns
-iris = load_iris()
-df = pd.DataFrame(data=iris.data, columns=iris.feature_names)
-df['target'] = iris.target
+from sklearn.metrics import accuracy_score,confusion_matrix
+iris=load_iris()
+df=pd.DataFrame(data=iris.data,columns=iris.feature_names)
+df['target']=iris.target
 print(df.head())
-
-Output:
-![Screenshot 2024-10-13 094237](https://github.com/user-attachments/assets/65596e67-0708-4ff0-a35d-6e7018abbb5a)
-
-
-X = df.drop('target', axis=1)
-y = df['target']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-sgd_clf = SGDClassifier(max_iter=1000, tol=1e-3)
-
-sgd_clf.fit(X_train, y_train)
-
-Output:
-![Screenshot 2024-10-13 094243](https://github.com/user-attachments/assets/abbebf33-ec09-4567-a0c1-b0984aa7b5f3)
-
-y_pred = sgd_clf.predict(X_test)
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy:.3f}")
-
-Output:
-![Screenshot 2024-10-13 094247](https://github.com/user-attachments/assets/a650c5fd-45b5-4db4-accc-1f461230b2bc)
-
-cm = confusion_matrix(y_test, y_pred)
-print("Confusion Matrix:")
-print(cm)
+x=df.drop('target',axis=1)
+x
+y=df['target']
+y
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
+sgd_clf=SGDClassifier(max_iter=1000,tol=1e-3)
+sgd_clf.fit(x_train,y_train)
+y_pred=sgd_clf.predict(x_test)
+print("Prediction")
+y_pred
+accuracy=accuracy_score(y_test,y_pred)
+print(f"Accuracy:{accuracy:.3f}")
+confusion=confusion_matrix(y_test,y_pred)
+print("confusion matrix")
+confusion
 ```
 ## Output:
 ![Screenshot 2024-10-13 094251](https://github.com/user-attachments/assets/e6a22b11-2c26-4c16-a664-70a2947e97ee)
+![image](https://github.com/user-attachments/assets/f979d743-3819-4480-9709-b5535da83f54)
 
 
 ## Result:
