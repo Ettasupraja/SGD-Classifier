@@ -38,19 +38,7 @@ print(df.head())
 
 Output:
 
-sepal length (cm)  sepal width (cm)  petal length (cm)  petal width (cm)  \
-0                5.1               3.5                1.4               0.2   
-1                4.9               3.0                1.4               0.2   
-2                4.7               3.2                1.3               0.2   
-3                4.6               3.1                1.5               0.2   
-4                5.0               3.6                1.4               0.2   
-
-   target  
-0       0  
-1       0  
-2       0  
-3       0  
-4       0
+![375938702-e67c9279-7fa9-412a-ad31-76ad207dfcdc](https://github.com/user-attachments/assets/ce123014-6cf9-4a1d-85c9-03b531be2cf5)
 
 X = df.drop('target', axis=1)
 y = df['target']
@@ -60,17 +48,15 @@ sgd_clf = SGDClassifier(max_iter=1000, tol=1e-3)
 sgd_clf.fit(X_train, y_train)
 
 Output:
-
-SGDClassifier
-SGDClassifier()
+![374886907-a865fcc4-6fa3-447f-a802-4d9ee8413bf5](https://github.com/user-attachments/assets/d75e92d3-b2eb-40ca-8bf8-e9254b40472c)
 
 y_pred = sgd_clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.3f}")
 
 Output:
-Accuracy: 0.433
 
+![374887523-bc2515cd-88eb-438e-8a84-5adc5960e686](https://github.com/user-attachments/assets/ad7ab23f-f887-423e-972e-c3d2d1a279f9)
 
 
 cm = confusion_matrix(y_test, y_pred)
@@ -78,11 +64,8 @@ print("Confusion Matrix:")
 print(cm)
 
 Output:
-Confusion Matrix:
-[[ 4  6  0]
- [ 0  9  0]
- [ 0 11  0]]
-*/
+![375938731-45eddd4e-b547-4e35-b63f-1983c8248598](https://github.com/user-attachments/assets/16871da1-0a6f-4e36-b9ce-c3d44c444aae)
+
 ```
 
 
