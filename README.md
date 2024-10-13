@@ -66,10 +66,7 @@ print("Confusion Matrix:")
 print(cm)
 
 Output:
-
 ![Screenshot 2024-10-12 173110](https://github.com/user-attachments/assets/4c85201b-a7bf-4e3d-99ea-76d10b8d9557)
-
-
 */
 ```
 
