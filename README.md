@@ -37,8 +37,8 @@ df['target'] = iris.target
 print(df.head())
 
 Output:
+![Screenshot 2024-10-13 094237](https://github.com/user-attachments/assets/65596e67-0708-4ff0-a35d-6e7018abbb5a)
 
-![375938702-e67c9279-7fa9-412a-ad31-76ad207dfcdc](https://github.com/user-attachments/assets/ce123014-6cf9-4a1d-85c9-03b531be2cf5)
 
 X = df.drop('target', axis=1)
 y = df['target']
@@ -48,23 +48,21 @@ sgd_clf = SGDClassifier(max_iter=1000, tol=1e-3)
 sgd_clf.fit(X_train, y_train)
 
 Output:
-![374886907-a865fcc4-6fa3-447f-a802-4d9ee8413bf5](https://github.com/user-attachments/assets/d75e92d3-b2eb-40ca-8bf8-e9254b40472c)
+![Screenshot 2024-10-13 094243](https://github.com/user-attachments/assets/abbebf33-ec09-4567-a0c1-b0984aa7b5f3)
 
 y_pred = sgd_clf.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy:.3f}")
 
 Output:
-
-![374887523-bc2515cd-88eb-438e-8a84-5adc5960e686](https://github.com/user-attachments/assets/ad7ab23f-f887-423e-972e-c3d2d1a279f9)
-
+![Screenshot 2024-10-13 094247](https://github.com/user-attachments/assets/a650c5fd-45b5-4db4-accc-1f461230b2bc)
 
 cm = confusion_matrix(y_test, y_pred)
 print("Confusion Matrix:")
 print(cm)
 
 Output:
-![375938731-45eddd4e-b547-4e35-b63f-1983c8248598](https://github.com/user-attachments/assets/16871da1-0a6f-4e36-b9ce-c3d44c444aae)
+![Screenshot 2024-10-13 094251](https://github.com/user-attachments/assets/e6a22b11-2c26-4c16-a664-70a2947e97ee)
 
 ```
 
